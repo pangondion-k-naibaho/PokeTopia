@@ -1,16 +1,17 @@
-package com.client.poketopia
+package com.client.poketopia.view.activity.screenload
 
 import android.app.Activity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.client.HomeActivity
+import com.client.poketopia.view.activity.home.HomeActivity
+import com.client.poketopia.R
 import com.client.poketopia.databinding.ActivityMainBinding
 
-class MainActivity : Activity() {
+class ScreeenLoadActivity : Activity() {
     private lateinit var binding: ActivityMainBinding
-    private val TAG = MainActivity::class.java.simpleName
+    private val TAG = ScreeenLoadActivity::class.java.simpleName
     private val MAX_PROGRESS = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,8 +43,9 @@ class MainActivity : Activity() {
 
     private fun moveToHome(){
         startActivity(
-            HomeActivity.newIntent(this@MainActivity)
+            HomeActivity.newIntent(this@ScreeenLoadActivity)
         )
-        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        finish()
     }
 }

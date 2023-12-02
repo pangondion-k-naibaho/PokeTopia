@@ -13,10 +13,10 @@
         android:theme="@style/Theme.PokeTopia"
         tools:targetApi="31">
         <activity
-            android:name="com.client.HomeActivity"
+            android:name=".view.activity.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.activity.screenload.ScreeenLoadActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.RemoveSplashScreenTheme">
