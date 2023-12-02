@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abi_blue"
+    app:layoutDescription="@xml/activity_main_scene">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_LogoApp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/ivAppLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/poketopia_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="20dp"/>
+
+        <ProgressBar
+            android:id="@+id/pbStartApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/ivAppLogo"
+            app:layout_constraintEnd_toEndOf="@+id/ivAppLogo"
+            app:layout_constraintTop_toBottomOf="@+id/ivAppLogo"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="0"
+            android:progressDrawable="@drawable/bg_pb_inside"
+            android:background="@drawable/bg_pb_outside"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
